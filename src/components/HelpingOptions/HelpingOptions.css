@@ -1,0 +1,16 @@
+.helping-options-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+  
+.helping-option-button {
+    padding: 0.5rem;
+    border-radius: 25px;
+    border: 0;
+    color: #1d1d1d;
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 4px rgba(150, 149, 149, 0.4);
+	margin: 3px;
+	cursor: pointer;
+}

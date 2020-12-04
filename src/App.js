@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Chatbot from 'react-chatbot-kit';
+import Image from './assets/icons/robotic.svg';
 import './App.css';
 
+import ActionProvider from './ActionProvider';
+import MessageParser from './MessageParser';
+import config from './config';
+
 function App() {
+  
+  const [showBot, toggleBot] = useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showBot && (
+        <div className="App-container">
+          <Chatbot 
+            config={config} 
+            actionProvider={ActionProvider}
+            messageParser={MessageParser} 
+            placeholderText="Écrivez ici"
+          />
+        </div>
+      )}
+      <button className="app-chatbot-button" onClick={() => toggleBot((prev) => !prev)}>
+        <img src={Image} alt="" className="app-chatbot-button-icon" />
+      </button>
     </div>
   );
 }
