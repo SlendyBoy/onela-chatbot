@@ -11,6 +11,17 @@ class ActionProvider {
         this.updateChatbotState(greetingMessage)
     }
 
+    handleHelpList = () => {
+      const message = this.createChatBotMessage(
+        "Dans quel domaine voulez-vous de l'aide ?",
+        {
+          widget: "helpingOptions",
+        }
+      );
+  
+      this.updateChatbotState(message);
+  };
+
     handleAlimentationList = () => {
         const message = this.createChatBotMessage(
           "Voici quelques aides pour subvenir à vos besoins en alimentation:",
@@ -21,6 +32,51 @@ class ActionProvider {
     
         this.updateChatbotState(message);
     };
+
+    handleLogementList = () => {
+      const message = this.createChatBotMessage(
+        "Voici quelques aides pour se loger:",
+        {
+          widget: "LogementLinks",
+        }
+      );
+  
+      this.updateChatbotState(message);
+    };
+
+    handleFinanceList = () => {
+      const message = this.createChatBotMessage(
+        "Voici quelques aides pour subvenir à vos besoins financiers:",
+        {
+          widget: "FinanceLinks",
+        }
+      );
+
+      this.updateChatbotState(message);
+    };
+
+    handleSantéList = () => {
+      const message = this.createChatBotMessage(
+        "Voici quelques aides pour rester en bonne santé:",
+        {
+          widget: "SantéLinks",
+        }
+      );
+
+      this.updateChatbotState(message);
+    };
+
+    handleSocialList = () => {
+      const message = this.createChatBotMessage(
+        "Voici quelques aides pour le social:",
+        {
+          widget: "SocialLinks",
+        }
+      );
+
+      this.updateChatbotState(message);
+    };
+
 
     handleDefault = () => {
       const message = this.createChatBotMessage(

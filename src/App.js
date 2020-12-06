@@ -9,7 +9,7 @@ import config from './config';
 
 function App() {
   
-  const [showBot, toggleBot] = useState(true);
+  const [showBot, toggleBot] = useState(false);
 
   return (
     <div className="App">

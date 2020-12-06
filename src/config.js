@@ -15,7 +15,7 @@ const config = {
 			`Bonjour je suis ${botName}. Je suis ici pour vous aider.`
 		),
 		createChatBotMessage(
-			"Dans quel domaine voulez-vous de l'aide?", 
+			"Dans quel domaine voulez-vous de l'aide ?", 
 			{
 				withAvatar: false,
 				delay: 600,
@@ -57,6 +57,90 @@ const config = {
 				  },
 				  {
 					text: "Restos du Coeur",
+					url:
+					  "https://www.restosducoeur.org/nos-actions/aide-alimentaire/",
+					id: 2,
+				  },
+
+				],
+			},
+		},
+		{
+			widgetName: "LogementLinks",
+			widgetFunc: (props) => <LinkList {...props} />,
+			props: {
+				options: [
+				  {
+					text: "Logement1",
+					url:
+					  "https://www.fage.org/innovation-sociale/solidarite-etudiante/agorae-fage/",
+					id: 1,
+				  },
+				  {
+					text: "Logement2",
+					url:
+					  "https://www.restosducoeur.org/nos-actions/aide-alimentaire/",
+					id: 2,
+				  },
+
+				],
+			},
+		},
+		{
+			widgetName: "FinanceLinks",
+			widgetFunc: (props) => <LinkList {...props} />,
+			props: {
+				options: [
+				  {
+					text: "Finance1",
+					url:
+					  "https://www.fage.org/innovation-sociale/solidarite-etudiante/agorae-fage/",
+					id: 1,
+				  },
+				  {
+					text: "Finance2",
+					url:
+					  "https://www.restosducoeur.org/nos-actions/aide-alimentaire/",
+					id: 2,
+				  },
+
+				],
+			},
+		},
+		{
+			widgetName: "SantéLinks",
+			widgetFunc: (props) => <LinkList {...props} />,
+			props: {
+				options: [
+				  {
+					text: "Santé1",
+					url:
+					  "https://www.fage.org/innovation-sociale/solidarite-etudiante/agorae-fage/",
+					id: 1,
+				  },
+				  {
+					text: "Santé2",
+					url:
+					  "https://www.restosducoeur.org/nos-actions/aide-alimentaire/",
+					id: 2,
+				  },
+
+				],
+			},
+		},
+		{
+			widgetName: "SocialLinks",
+			widgetFunc: (props) => <LinkList {...props} />,
+			props: {
+				options: [
+				  {
+					text: "Social1",
+					url:
+					  "https://www.fage.org/innovation-sociale/solidarite-etudiante/agorae-fage/",
+					id: 1,
+				  },
+				  {
+					text: "Social2",
 					url:
 					  "https://www.restosducoeur.org/nos-actions/aide-alimentaire/",
 					id: 2,
